@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Cairo } from "next/font/google";
 import "./globals.css";
+
+const cairo = Cairo({ subsets: ["arabic", "latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
-      <body className="min-h-screen bg-white font-sans text-zinc-950 antialiased">
+      <body
+        className={`${cairo.className} min-h-screen bg-white text-zinc-950 antialiased`}
+      >
         {children}
       </body>
     </html>
