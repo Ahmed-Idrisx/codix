@@ -14,7 +14,10 @@ export default function ForgotPasswordForm() {
       <form className="flex flex-col gap-6">
         <FormInput label="البريد الإلكتروني" type="email" />
 
-        <MainButton fullWidth> إرسال الكود</MainButton>
+        <MainButton type="submit" fullWidth>
+          {" "}
+          إرسال الكود
+        </MainButton>
 
         <p className="text-center text-sm text-zinc-500">
           اضغط هنا للعودة إلى{" "}

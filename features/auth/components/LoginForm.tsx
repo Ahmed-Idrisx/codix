@@ -43,7 +43,10 @@ export function LoginForm() {
           </Link>
         </div>
 
-        <MainButton fullWidth> تسجيل الدخول</MainButton>
+        <MainButton type="submit" fullWidth>
+          {" "}
+          تسجيل الدخول
+        </MainButton>
       </form>
     </div>
   );
