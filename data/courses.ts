@@ -2150,8 +2150,8 @@ export const courses: Course[] = [
     description:
       "اتعلم Flutter خطوة بخطوة مع Eraasoft، وافهم Dart وابني تطبيقات موبايل احترافية تعمل على Android وiOS من خلال كورس عملي مناسب للمبتدئين.",
     what_will_learn: [
-      "Æ What is programming language",
-      "Æ Software and Hardware",
+      "What is programming language",
+      "Software and Hardware",
       "What is native",
       "Introduction to Dart",
       "Data Types",
@@ -2181,8 +2181,8 @@ export const courses: Course[] = [
       {
         title: "Week #1 - Introduction",
         lessons: [
-          "Æ What is programming language",
-          "Æ Software and Hardware",
+          "What is programming language",
+          "Software and Hardware",
           "What is native",
           "What is cross platform",
           "Native vs Cross-Platform",
