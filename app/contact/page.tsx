@@ -99,7 +99,7 @@ const Contact = () => {
 
                   <textarea
                     id="message"
-                    rows={6}
+                    rows={4}
                     placeholder="اكتب رسالتك هنا..."
                     {...register("message")}
                     className={`min-h-40 w-full resize-none rounded-2xl border bg-white px-5 py-4 text-sm text-gray-900 outline-none transition-colors placeholder:text-gray-400 sm:text-base ${

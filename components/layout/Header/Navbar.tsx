@@ -14,68 +14,9 @@ import {
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { usePathname } from "next/navigation";
-
-type User = {
-  id: number;
-  first_name: string;
-  last_name: string;
-  full_name: string;
-  email: string;
-  avatar: string | null;
-} | null;
-
-const navLinks = [
-  {
-    title: "الرئيسية",
-    href: "/",
-  },
-  {
-    title: "الدورات",
-    href: "/courses",
-  },
-  {
-    title: "الرحلة التعليمية",
-    href: "/journey",
-  },
-  {
-    title: "اراء الطلاب",
-    href: "/reviews",
-  },
-  // {
-  //   title: "الدورات المجانية",
-  //   href: "/free-courses",
-  // },
-  // {
-  //   title: "تدريب الشركات",
-  //   href: "/training-services",
-  // },
-  {
-    title: "المقالات",
-    href: "/articles",
-  },
-  {
-    title: "من نحن",
-    href: "/about",
-  },
-  {
-    title: "تواصل معنا",
-    href: "/contact",
-  },
-];
+import { navLinks, user } from "@/constants/site";
 
 const Header = () => {
-  // if no user :
-  // const user = null as User;
-  // if user :
-  const user: User | null = {
-    id: 91,
-    first_name: "ahmed",
-    last_name: "idris",
-    full_name: "ahmed idris",
-    email: "ahmedbashirx@gmail.com",
-    avatar: null,
-  };
-
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -193,7 +134,7 @@ const Header = () => {
                     {user.avatar ? (
                       <Image
                         src={user.avatar}
-                        alt={user.full_name}
+                        alt={user.first_name}
                         width={36}
                         height={36}
                         className="h-full w-full object-cover"
@@ -221,7 +162,7 @@ const Header = () => {
                         <p className="text-xs text-gray-400">مرحبًا بك</p>
 
                         <p className="mt-1 text-sm font-semibold text-gray-800">
-                          {user.full_name}
+                          {user.first_name} {user.last_name}
                         </p>
                       </div>
 
@@ -322,7 +263,7 @@ const Header = () => {
               {user.avatar ? (
                 <Image
                   src={user.avatar}
-                  alt={user.full_name}
+                  alt={user.first_name}
                   width={56}
                   height={56}
                   className="h-full w-full object-cover"
@@ -334,7 +275,7 @@ const Header = () => {
 
             {/* User info */}
             <div className="min-w-0">
-              <p className="font-semibold text-gray-800">{user.full_name}</p>
+              <p className="font-semibold text-gray-800">{user.first_name}</p>
 
               <p className="text-sm text-gray-400">{user.email}</p>
             </div>
