@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="col-span-12 md:col-span-6 lg:col-span-3 flex flex-col gap-3">
           <Link href="#hero">
             <Image
-              src="/logo2.png"
+              src="/logo.png"
               alt="شعار إيراسوفت | Eraasoft"
               width={130}
               height={44}

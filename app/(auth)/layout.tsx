@@ -24,7 +24,12 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
 
       <div className="hidden lg:flex items-center justify-center">
         <div className="relative h-full w-full overflow-hidden rounded-4xl">
-          <Image src="/auth.jpg" alt="Codix" fill className="object-cover" />
+          <Image
+            src="/auth.webp"
+            alt="auth image"
+            fill
+            className="object-cover"
+          />
 
           <div className="absolute inset-0 bg-black/60 flex justify-center items-end text-center pb-20 ">
             <p className="text-3xl font-bold leading-relaxed text-white">
